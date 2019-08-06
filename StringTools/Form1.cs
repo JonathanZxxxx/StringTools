@@ -20,6 +20,7 @@ namespace StringTools
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            //this.WindowState = FormWindowState.Maximized;    //最大化窗体 
             SplitBox.Hide();
             var selectDic = new Dictionary<int, string>();
             selectDic.Add(0, "换行符");
