@@ -20,6 +20,7 @@ namespace StringTools
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            //this.WindowState = FormWindowState.Maximized;    //最大化窗体 
             SplitBox.Hide();
             var selectDic = new Dictionary<int, string>();
             selectDic.Add(0, "换行符");
@@ -30,6 +31,8 @@ namespace StringTools
             SplitComboBox.DataSource = bindingSource;
             SplitComboBox.ValueMember = "Key";
             SplitComboBox.DisplayMember = "Value";
+            BeforeTextBox.Hide();
+            BackTextBox.Hide();
         }
 
         private void ExcuteButton_Click(object sender, EventArgs e)
@@ -56,6 +59,28 @@ namespace StringTools
                 }
             }
             var stringList = function.SplitString(input, select, SplitBox.Text);
+            //前后新增字符串
+            if (BeforeCheckBox.Checked && string.IsNullOrWhiteSpace(BeforeTextBox.Text))
+            {
+                MessageBox.Show("请输入前面新增字符串！");
+                return;
+            }
+            if (BackCheckBox.Checked && string.IsNullOrWhiteSpace(BackTextBox.Text))
+            {
+                MessageBox.Show("请输入前面新增字符串！");
+                return;
+            }
+            for (int i = 0; i < stringList.Count; i++)
+            {
+                if (BeforeCheckBox.Checked)
+                {
+                    stringList[i] = BeforeTextBox.Text + stringList[i];
+                }
+                if (BackCheckBox.Checked)
+                {
+                    stringList[i] = stringList[i] + BackTextBox.Text;
+                }
+            }
             //连接字符
             if (string.IsNullOrWhiteSpace(JoinBox.Text))
             {
@@ -76,6 +101,32 @@ namespace StringTools
             else
             {
                 SplitBox.Hide();
+            }
+        }
+
+        private void BeforeCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (BeforeCheckBox.Checked)
+            {
+                BeforeTextBox.Show();
+            }
+            else
+            {
+                BeforeTextBox.Hide();
+                BeforeTextBox.Text = "";
+            }
+        }
+
+        private void BackCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (BackCheckBox.Checked)
+            {
+                BackTextBox.Show();
+            }
+            else
+            {
+                BackTextBox.Hide();
+                BackTextBox.Text = "";
             }
         }
     }
