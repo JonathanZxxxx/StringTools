@@ -11,7 +11,6 @@ D:\Coding\StringTools\StringTools\obj\Debug\StringTools.MainForm.resources
 D:\Coding\StringTools4Git\StringTools\bin\Debug\StringTools.exe.config
 D:\Coding\StringTools4Git\StringTools\bin\Debug\StringTools.exe
 D:\Coding\StringTools4Git\StringTools\bin\Debug\StringTools.pdb
-D:\Coding\StringTools4Git\StringTools\obj\Debug\StringTools.csprojAssemblyReference.cache
 D:\Coding\StringTools4Git\StringTools\obj\Debug\StringTools.MainForm.resources
 D:\Coding\StringTools4Git\StringTools\obj\Debug\StringTools.Properties.Resources.resources
 D:\Coding\StringTools4Git\StringTools\obj\Debug\StringTools.csproj.GenerateResource.cache
