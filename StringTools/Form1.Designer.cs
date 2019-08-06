@@ -49,6 +49,9 @@
             this.邮箱zxjndxoutlookcomToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gitHubJonathanZxxxxToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bloghttpswwwcnblogscomzxxxxToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.版本号V11ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.v11ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -178,7 +181,8 @@
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.AboutMenuButton});
+            this.AboutMenuButton,
+            this.版本号V11ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
@@ -221,6 +225,28 @@
             this.bloghttpswwwcnblogscomzxxxxToolStripMenuItem.Size = new System.Drawing.Size(274, 22);
             this.bloghttpswwwcnblogscomzxxxxToolStripMenuItem.Text = "Blog:https://www.cnblogs.com/zxxxx";
             // 
+            // 版本号V11ToolStripMenuItem
+            // 
+            this.版本号V11ToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.版本号V11ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.v11ToolStripMenuItem,
+            this.toolStripMenuItem2});
+            this.版本号V11ToolStripMenuItem.Name = "版本号V11ToolStripMenuItem";
+            this.版本号V11ToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
+            this.版本号V11ToolStripMenuItem.Text = "版本信息";
+            // 
+            // v11ToolStripMenuItem
+            // 
+            this.v11ToolStripMenuItem.Name = "v11ToolStripMenuItem";
+            this.v11ToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
+            this.v11ToolStripMenuItem.Text = "版本号:V1.2";
+            // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(196, 22);
+            this.toolStripMenuItem2.Text = "发布日期:2019年8月6日";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -244,7 +270,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainForm";
-            this.Text = "字符串处理小工具V1.0";
+            this.Text = "字符串处理小工具";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -275,6 +301,9 @@
         private System.Windows.Forms.ToolStripMenuItem 邮箱zxjndxoutlookcomToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gitHubJonathanZxxxxToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem bloghttpswwwcnblogscomzxxxxToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 版本号V11ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem v11ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
     }
 }
 
