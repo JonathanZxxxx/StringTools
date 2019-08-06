@@ -38,6 +38,10 @@
             this.SplitBox = new System.Windows.Forms.TextBox();
             this.JoinLabel = new System.Windows.Forms.Label();
             this.JoinBox = new System.Windows.Forms.TextBox();
+            this.BeforeCheckBox = new System.Windows.Forms.CheckBox();
+            this.BeforeTextBox = new System.Windows.Forms.TextBox();
+            this.BackTextBox = new System.Windows.Forms.TextBox();
+            this.BackCheckBox = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // InputLabel
@@ -127,11 +131,51 @@
             this.JoinBox.TabIndex = 10;
             this.JoinBox.Text = ",";
             // 
+            // BeforeCheckBox
+            // 
+            this.BeforeCheckBox.AutoSize = true;
+            this.BeforeCheckBox.Location = new System.Drawing.Point(431, 133);
+            this.BeforeCheckBox.Name = "BeforeCheckBox";
+            this.BeforeCheckBox.Size = new System.Drawing.Size(72, 16);
+            this.BeforeCheckBox.TabIndex = 12;
+            this.BeforeCheckBox.Text = "前面新增";
+            this.BeforeCheckBox.UseVisualStyleBackColor = true;
+            this.BeforeCheckBox.CheckedChanged += new System.EventHandler(this.BeforeCheckBox_CheckedChanged);
+            // 
+            // BeforeTextBox
+            // 
+            this.BeforeTextBox.Location = new System.Drawing.Point(518, 133);
+            this.BeforeTextBox.Name = "BeforeTextBox";
+            this.BeforeTextBox.Size = new System.Drawing.Size(100, 21);
+            this.BeforeTextBox.TabIndex = 13;
+            // 
+            // BackTextBox
+            // 
+            this.BackTextBox.Location = new System.Drawing.Point(518, 184);
+            this.BackTextBox.Name = "BackTextBox";
+            this.BackTextBox.Size = new System.Drawing.Size(100, 21);
+            this.BackTextBox.TabIndex = 15;
+            // 
+            // BackCheckBox
+            // 
+            this.BackCheckBox.AutoSize = true;
+            this.BackCheckBox.Location = new System.Drawing.Point(431, 184);
+            this.BackCheckBox.Name = "BackCheckBox";
+            this.BackCheckBox.Size = new System.Drawing.Size(72, 16);
+            this.BackCheckBox.TabIndex = 14;
+            this.BackCheckBox.Text = "后面新增";
+            this.BackCheckBox.UseVisualStyleBackColor = true;
+            this.BackCheckBox.CheckedChanged += new System.EventHandler(this.BackCheckBox_CheckedChanged);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.BackTextBox);
+            this.Controls.Add(this.BackCheckBox);
+            this.Controls.Add(this.BeforeTextBox);
+            this.Controls.Add(this.BeforeCheckBox);
             this.Controls.Add(this.JoinBox);
             this.Controls.Add(this.JoinLabel);
             this.Controls.Add(this.SplitBox);
@@ -162,6 +206,10 @@
         private System.Windows.Forms.TextBox SplitBox;
         private System.Windows.Forms.Label JoinLabel;
         private System.Windows.Forms.TextBox JoinBox;
+        private System.Windows.Forms.CheckBox BeforeCheckBox;
+        private System.Windows.Forms.TextBox BeforeTextBox;
+        private System.Windows.Forms.TextBox BackTextBox;
+        private System.Windows.Forms.CheckBox BackCheckBox;
     }
 }
 
