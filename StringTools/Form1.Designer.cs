@@ -239,7 +239,7 @@
             // 
             this.v11ToolStripMenuItem.Name = "v11ToolStripMenuItem";
             this.v11ToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
-            this.v11ToolStripMenuItem.Text = "版本号:V1.1";
+            this.v11ToolStripMenuItem.Text = "版本号:V1.2";
             // 
             // toolStripMenuItem2
             // 
