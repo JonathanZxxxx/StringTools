@@ -12,6 +12,7 @@ namespace StringTools
 {
     public partial class MainForm : Form
     {
+        Function function = new Function();
         public MainForm()
         {
             InitializeComponent();
@@ -23,7 +24,7 @@ namespace StringTools
             var selectDic = new Dictionary<int, string>();
             selectDic.Add(0, "换行符");
             selectDic.Add(1, "空格");
-            selectDic.Add(3, "输入字符");
+            selectDic.Add(2, "输入字符");
             BindingSource bindingSource = new BindingSource();
             bindingSource.DataSource = selectDic;
             SplitComboBox.DataSource = bindingSource;
@@ -33,16 +34,48 @@ namespace StringTools
 
         private void ExcuteButton_Click(object sender, EventArgs e)
         {
-            var a = InputTextBox.Text;
-            OutputTextBox.Text = a;
+            var input = InputTextBox.Text.Trim();
+            if (string.IsNullOrWhiteSpace(input))
+            {
+                MessageBox.Show("请输入处理文本！");
+                return;
+            }
+            var select = (int)SplitComboBox.SelectedValue;
+            //分割字符
+            if (select == 2)
+            {
+                if (string.IsNullOrWhiteSpace(SplitBox.Text))
+                {
+                    MessageBox.Show("请输入分割字符！");
+                    return;
+                }
+                if (SplitBox.Text.Length > 1)
+                {
+                    MessageBox.Show("分割字符长度只能为1！");
+                    return;
+                }
+            }
+            var stringList = function.SplitString(input, select, SplitBox.Text);
+            //连接字符
+            if (string.IsNullOrWhiteSpace(JoinBox.Text))
+            {
+                MessageBox.Show("请输入连接字符！");
+                return;
+            }
+            var joinString = string.Join(JoinBox.Text, stringList);
+            OutputTextBox.Text = joinString;
         }
 
         private void SplitComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             var select = SplitComboBox.SelectedValue;
-            if (select.GetType().Name == "Int32" && (int)select == 3)
+            if (select.GetType().Name == "Int32" && (int)select == 2)
             {
                 SplitBox.Show();
+            }
+            else
+            {
+                SplitBox.Hide();
             }
         }
     }
