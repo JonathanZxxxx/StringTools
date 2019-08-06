@@ -36,6 +36,8 @@
             this.SplitComboBox = new System.Windows.Forms.ComboBox();
             this.SplitLabel = new System.Windows.Forms.Label();
             this.SplitBox = new System.Windows.Forms.TextBox();
+            this.JoinLabel = new System.Windows.Forms.Label();
+            this.JoinBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // InputLabel
@@ -67,9 +69,9 @@
             // 
             // OutputTextBox
             // 
-            this.OutputTextBox.Location = new System.Drawing.Point(92, 184);
+            this.OutputTextBox.Location = new System.Drawing.Point(92, 186);
             this.OutputTextBox.Name = "OutputTextBox";
-            this.OutputTextBox.Size = new System.Drawing.Size(294, 110);
+            this.OutputTextBox.Size = new System.Drawing.Size(294, 117);
             this.OutputTextBox.TabIndex = 4;
             this.OutputTextBox.Text = "";
             // 
@@ -84,6 +86,7 @@
             // 
             // SplitComboBox
             // 
+            this.SplitComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.SplitComboBox.FormattingEnabled = true;
             this.SplitComboBox.Location = new System.Drawing.Point(497, 38);
             this.SplitComboBox.Name = "SplitComboBox";
@@ -98,7 +101,7 @@
             this.SplitLabel.Name = "SplitLabel";
             this.SplitLabel.Size = new System.Drawing.Size(53, 12);
             this.SplitLabel.TabIndex = 7;
-            this.SplitLabel.Text = "切割字符";
+            this.SplitLabel.Text = "分割字符";
             // 
             // SplitBox
             // 
@@ -107,11 +110,30 @@
             this.SplitBox.Size = new System.Drawing.Size(100, 21);
             this.SplitBox.TabIndex = 8;
             // 
+            // JoinLabel
+            // 
+            this.JoinLabel.AutoSize = true;
+            this.JoinLabel.Location = new System.Drawing.Point(429, 87);
+            this.JoinLabel.Name = "JoinLabel";
+            this.JoinLabel.Size = new System.Drawing.Size(53, 12);
+            this.JoinLabel.TabIndex = 9;
+            this.JoinLabel.Text = "连接字符";
+            // 
+            // JoinBox
+            // 
+            this.JoinBox.Location = new System.Drawing.Point(497, 84);
+            this.JoinBox.Name = "JoinBox";
+            this.JoinBox.Size = new System.Drawing.Size(100, 21);
+            this.JoinBox.TabIndex = 10;
+            this.JoinBox.Text = ",";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.JoinBox);
+            this.Controls.Add(this.JoinLabel);
             this.Controls.Add(this.SplitBox);
             this.Controls.Add(this.SplitLabel);
             this.Controls.Add(this.SplitComboBox);
@@ -138,6 +160,8 @@
         private System.Windows.Forms.ComboBox SplitComboBox;
         private System.Windows.Forms.Label SplitLabel;
         private System.Windows.Forms.TextBox SplitBox;
+        private System.Windows.Forms.Label JoinLabel;
+        private System.Windows.Forms.TextBox JoinBox;
     }
 }
 
