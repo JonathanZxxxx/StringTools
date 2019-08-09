@@ -52,6 +52,8 @@
             this.版本号V11ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.v11ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.DeleteCheckBox = new System.Windows.Forms.CheckBox();
+            this.DeleteTextBox = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -239,19 +241,39 @@
             // 
             this.v11ToolStripMenuItem.Name = "v11ToolStripMenuItem";
             this.v11ToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
-            this.v11ToolStripMenuItem.Text = "版本号:V1.2";
+            this.v11ToolStripMenuItem.Text = "版本号:V2.0";
             // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
             this.toolStripMenuItem2.Size = new System.Drawing.Size(196, 22);
-            this.toolStripMenuItem2.Text = "发布日期:2019年8月6日";
+            this.toolStripMenuItem2.Text = "发布日期:2019年8月9日";
+            // 
+            // DeleteCheckBox
+            // 
+            this.DeleteCheckBox.AutoSize = true;
+            this.DeleteCheckBox.Location = new System.Drawing.Point(430, 258);
+            this.DeleteCheckBox.Name = "DeleteCheckBox";
+            this.DeleteCheckBox.Size = new System.Drawing.Size(72, 16);
+            this.DeleteCheckBox.TabIndex = 17;
+            this.DeleteCheckBox.Text = "删除字符";
+            this.DeleteCheckBox.UseVisualStyleBackColor = true;
+            this.DeleteCheckBox.CheckedChanged += new System.EventHandler(this.DeleteCheckBox_CheckedChanged);
+            // 
+            // DeleteTextBox
+            // 
+            this.DeleteTextBox.Location = new System.Drawing.Point(517, 256);
+            this.DeleteTextBox.Name = "DeleteTextBox";
+            this.DeleteTextBox.Size = new System.Drawing.Size(100, 21);
+            this.DeleteTextBox.TabIndex = 18;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.DeleteTextBox);
+            this.Controls.Add(this.DeleteCheckBox);
             this.Controls.Add(this.BackTextBox);
             this.Controls.Add(this.BackCheckBox);
             this.Controls.Add(this.BeforeTextBox);
@@ -304,6 +326,8 @@
         private System.Windows.Forms.ToolStripMenuItem 版本号V11ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem v11ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
+        private System.Windows.Forms.CheckBox DeleteCheckBox;
+        private System.Windows.Forms.TextBox DeleteTextBox;
     }
 }
 
