@@ -33,6 +33,7 @@ namespace StringTools
             SplitComboBox.DisplayMember = "Value";
             BeforeTextBox.Hide();
             BackTextBox.Hide();
+            DeleteTextBox.Hide();
         }
 
         private void ExcuteButton_Click(object sender, EventArgs e)
@@ -42,6 +43,16 @@ namespace StringTools
             {
                 MessageBox.Show("请输入处理文本！");
                 return;
+            }
+            //删除特定字符
+            if (DeleteCheckBox.Checked)
+            {
+                if (string.IsNullOrWhiteSpace(DeleteTextBox.Text))
+                {
+                    MessageBox.Show("请输入删除字符！");
+                    return;
+                }
+                input = input.Replace(DeleteTextBox.Text, "");
             }
             var select = (int)SplitComboBox.SelectedValue;
             //分割字符
@@ -91,6 +102,11 @@ namespace StringTools
             OutputTextBox.Text = joinString;
         }
 
+        /// <summary>
+        /// 分割字符
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void SplitComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             var select = SplitComboBox.SelectedValue;
@@ -101,9 +117,15 @@ namespace StringTools
             else
             {
                 SplitBox.Hide();
+                SplitBox.Text = "";
             }
         }
 
+        /// <summary>
+        /// 前面新增字符
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BeforeCheckBox_CheckedChanged(object sender, EventArgs e)
         {
             if (BeforeCheckBox.Checked)
@@ -117,6 +139,11 @@ namespace StringTools
             }
         }
 
+        /// <summary>
+        /// 后面新增字符
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BackCheckBox_CheckedChanged(object sender, EventArgs e)
         {
             if (BackCheckBox.Checked)
@@ -127,6 +154,24 @@ namespace StringTools
             {
                 BackTextBox.Hide();
                 BackTextBox.Text = "";
+            }
+        }
+
+        /// <summary>
+        /// 删除特定字符
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void DeleteCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (DeleteCheckBox.Checked)
+            {
+                DeleteTextBox.Show();
+            }
+            else
+            {
+                DeleteTextBox.Hide();
+                DeleteTextBox.Text = "";
             }
         }
     }
