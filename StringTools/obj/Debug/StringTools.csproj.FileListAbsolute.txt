@@ -17,4 +17,3 @@ D:\Coding\StringTools4Git\StringTools\obj\Debug\StringTools.csproj.GenerateResou
 D:\Coding\StringTools4Git\StringTools\obj\Debug\StringTools.csproj.CoreCompileInputs.cache
 D:\Coding\StringTools4Git\StringTools\obj\Debug\StringTools.exe
 D:\Coding\StringTools4Git\StringTools\obj\Debug\StringTools.pdb
-D:\Coding\StringTools4Git\StringTools\obj\Debug\StringTools.csprojAssemblyReference.cache
