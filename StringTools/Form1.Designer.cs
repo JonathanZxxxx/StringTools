@@ -54,6 +54,8 @@
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.DeleteCheckBox = new System.Windows.Forms.CheckBox();
             this.DeleteTextBox = new System.Windows.Forms.TextBox();
+            this.RegexCheckBox = new System.Windows.Forms.CheckBox();
+            this.RegexTextBox = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -187,7 +189,7 @@
             this.版本号V11ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(800, 25);
             this.menuStrip1.TabIndex = 16;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -200,31 +202,31 @@
             this.gitHubJonathanZxxxxToolStripMenuItem,
             this.bloghttpswwwcnblogscomzxxxxToolStripMenuItem});
             this.AboutMenuButton.Name = "AboutMenuButton";
-            this.AboutMenuButton.Size = new System.Drawing.Size(41, 20);
+            this.AboutMenuButton.Size = new System.Drawing.Size(44, 21);
             this.AboutMenuButton.Text = "关于";
             // 
             // 作者ZhengXinToolStripMenuItem
             // 
             this.作者ZhengXinToolStripMenuItem.Name = "作者ZhengXinToolStripMenuItem";
-            this.作者ZhengXinToolStripMenuItem.Size = new System.Drawing.Size(274, 22);
+            this.作者ZhengXinToolStripMenuItem.Size = new System.Drawing.Size(287, 22);
             this.作者ZhengXinToolStripMenuItem.Text = "作者:ZhengXin";
             // 
             // 邮箱zxjndxoutlookcomToolStripMenuItem
             // 
             this.邮箱zxjndxoutlookcomToolStripMenuItem.Name = "邮箱zxjndxoutlookcomToolStripMenuItem";
-            this.邮箱zxjndxoutlookcomToolStripMenuItem.Size = new System.Drawing.Size(274, 22);
+            this.邮箱zxjndxoutlookcomToolStripMenuItem.Size = new System.Drawing.Size(287, 22);
             this.邮箱zxjndxoutlookcomToolStripMenuItem.Text = "邮箱:zxjndx@outlook.com";
             // 
             // gitHubJonathanZxxxxToolStripMenuItem
             // 
             this.gitHubJonathanZxxxxToolStripMenuItem.Name = "gitHubJonathanZxxxxToolStripMenuItem";
-            this.gitHubJonathanZxxxxToolStripMenuItem.Size = new System.Drawing.Size(274, 22);
+            this.gitHubJonathanZxxxxToolStripMenuItem.Size = new System.Drawing.Size(287, 22);
             this.gitHubJonathanZxxxxToolStripMenuItem.Text = "GitHub:JonathanZxxxx";
             // 
             // bloghttpswwwcnblogscomzxxxxToolStripMenuItem
             // 
             this.bloghttpswwwcnblogscomzxxxxToolStripMenuItem.Name = "bloghttpswwwcnblogscomzxxxxToolStripMenuItem";
-            this.bloghttpswwwcnblogscomzxxxxToolStripMenuItem.Size = new System.Drawing.Size(274, 22);
+            this.bloghttpswwwcnblogscomzxxxxToolStripMenuItem.Size = new System.Drawing.Size(287, 22);
             this.bloghttpswwwcnblogscomzxxxxToolStripMenuItem.Text = "Blog:https://www.cnblogs.com/zxxxx";
             // 
             // 版本号V11ToolStripMenuItem
@@ -234,20 +236,20 @@
             this.v11ToolStripMenuItem,
             this.toolStripMenuItem2});
             this.版本号V11ToolStripMenuItem.Name = "版本号V11ToolStripMenuItem";
-            this.版本号V11ToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
+            this.版本号V11ToolStripMenuItem.Size = new System.Drawing.Size(68, 21);
             this.版本号V11ToolStripMenuItem.Text = "版本信息";
             // 
             // v11ToolStripMenuItem
             // 
             this.v11ToolStripMenuItem.Name = "v11ToolStripMenuItem";
-            this.v11ToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
-            this.v11ToolStripMenuItem.Text = "版本号:V2.0";
+            this.v11ToolStripMenuItem.Size = new System.Drawing.Size(212, 22);
+            this.v11ToolStripMenuItem.Text = "版本号:V3.0";
             // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(196, 22);
-            this.toolStripMenuItem2.Text = "发布日期:2019年8月9日";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(212, 22);
+            this.toolStripMenuItem2.Text = "发布日期:2019年8月19日";
             // 
             // DeleteCheckBox
             // 
@@ -267,11 +269,31 @@
             this.DeleteTextBox.Size = new System.Drawing.Size(100, 21);
             this.DeleteTextBox.TabIndex = 18;
             // 
+            // RegexCheckBox
+            // 
+            this.RegexCheckBox.AutoSize = true;
+            this.RegexCheckBox.Location = new System.Drawing.Point(430, 300);
+            this.RegexCheckBox.Name = "RegexCheckBox";
+            this.RegexCheckBox.Size = new System.Drawing.Size(108, 16);
+            this.RegexCheckBox.TabIndex = 19;
+            this.RegexCheckBox.Text = "匹配正则表达式";
+            this.RegexCheckBox.UseVisualStyleBackColor = true;
+            this.RegexCheckBox.CheckedChanged += new System.EventHandler(this.RegexCheckBox_CheckedChanged);
+            // 
+            // RegexTextBox
+            // 
+            this.RegexTextBox.Location = new System.Drawing.Point(544, 298);
+            this.RegexTextBox.Name = "RegexTextBox";
+            this.RegexTextBox.Size = new System.Drawing.Size(100, 21);
+            this.RegexTextBox.TabIndex = 20;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.RegexTextBox);
+            this.Controls.Add(this.RegexCheckBox);
             this.Controls.Add(this.DeleteTextBox);
             this.Controls.Add(this.DeleteCheckBox);
             this.Controls.Add(this.BackTextBox);
@@ -328,6 +350,8 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
         private System.Windows.Forms.CheckBox DeleteCheckBox;
         private System.Windows.Forms.TextBox DeleteTextBox;
+        private System.Windows.Forms.CheckBox RegexCheckBox;
+        private System.Windows.Forms.TextBox RegexTextBox;
     }
 }
 
